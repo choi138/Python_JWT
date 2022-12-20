@@ -72,6 +72,7 @@ function Form() {
             <div>
                 <h1>Login</h1>
                 <form onSubmit={onLoginSubmit}>
+                    <input type="text" name="email" placeholder="email" />
                     <input type="text" name="id" placeholder="id" />
                     <input type="text" name="password" placeholder="password" />
                     <button type="submit">Login</button>
@@ -82,7 +83,7 @@ function Form() {
                         <p>{loginData.password}</p>
                         <p>{loginData.token}</p>
                     </div>
-                    : null};
+                    : null}
             </div>
             <br />
 

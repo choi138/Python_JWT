@@ -112,12 +112,14 @@ def profile(
 ):
     # 토큰 검증
     try:
-        payload = jwt.decode(token, secret_key, algorithms=["HS256"])
+        payload = jwt.decode(token, secret_key, algorithms=["HS256"]) 
+        # 해석: 토큰을 secret_key로 HS256 알고리즘으로 해석해라
     except:
         return {"message": "토큰이 유효하지 않습니다."}
 
     # id로 유저 찾기
-    user = get_user(payload["id"])
+    user = get_user(payload["id"]) 
+    # 해석: payload의 id를 가진 유저를 찾아라
 
     # 유저가 없으면
     if not user:
